@@ -1,0 +1,35 @@
+
+Оплата
+
+o1 - оплата
+aСУММА_КОПЕЙКИ
+с643 (РУБЛИ)
+
+
+$ ./uic_payment_app o1 a100 c643
+2019-09-13 11:42:47 INFO  logger settings:
+2019-09-13 11:42:47 INFO  console output : true
+2019-09-13 11:42:47 INFO  file    output : true
+2019-09-13 11:42:47 INFO  file      size : 10000
+2019-09-13 11:42:47 INFO  looking for uic among serial devices...
+2019-09-13 11:42:47 WARN  UIC not found among serial ports
+terminate called after throwing an instance of 'std::runtime_error'
+terminate called recursively
+Aborted
+
+$ echo $?
+134
+
+Успешная оплата - код возврата 0, остальное - ошибки
+
+
+2019-09-13 11:46:40 INFO  receipt saved at: receipt_190913_114640.txt
+2019-09-13 11:46:40 INFO  command: uic beep signal
+2019-09-13 11:46:40 INFO  returned: OK
+2019-09-13 11:46:40 INFO  Purchase operation successfully finished
+2019-09-13 11:46:40 INFO  program returned: 0 (OK)
+2019-09-13 11:46:40 INFO  response code:    0
+$ echo $?
+0
+
+
